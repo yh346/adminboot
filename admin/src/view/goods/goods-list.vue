@@ -204,11 +204,11 @@ export default {
             );
           }
         },
-        // {
-        //   title: "最近更新时间",
-        //   key: "update_time",
-        //   minWidth: 152
-        // }
+        {
+          title: "最近更新时间",
+          key: "update_time",
+          minWidth: 152
+        }
       ],
       goods_type_array: [],
       selecteds: [],
