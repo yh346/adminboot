@@ -1,7 +1,7 @@
 ﻿<template>
   <div class="user-avator-dropdown">
     <Dropdown @on-click="handleClick">
-      <Avatar :src="user&&user.avatar"/>
+      <Avatar style="background-color: #87d068" size="large"  icon="ios-person" />
       <span class="user-real-name">{{user&&user.name}}</span>
       <Icon :size="18" type="md-arrow-dropdown"></Icon>
       <DropdownMenu slot="list">

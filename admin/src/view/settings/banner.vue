@@ -98,7 +98,7 @@ export default {
         },
         {
           title: "轮播类型",
-          key: "banner_type_name",
+          key: "banner_type_string",
           width: 100
         },
         {

@@ -44,10 +44,8 @@ export const update = (json) => {
  * 删除用户
  * @param {Number} adminID
  */
-export const del = (adminID) => {
-  return axios.post(API_URL.adminUser.delete, {
-    single_id: adminID
-  });
+export const del = (id) => {
+  return axios.get(API_URL.adminUser.delete+"/"+id);
 }
 
 /**
@@ -76,10 +74,8 @@ export const modifyPwd = (json) => {
  * 设置用户状态
  * @param {Number} adminID
  */
-export const disabled = (adminID) => {
-  return axios.post(API_URL.adminUser.disabled, {
-    single_id: adminID
-  });
+export const disabled = (id) => {
+  return axios.get(API_URL.adminUser.disabled+"/"+id);
 }
 
 /**

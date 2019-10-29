@@ -39,10 +39,9 @@ export const update = (json) => {
  * 删除角色数据
  * @param {Number} roleID
  */
-export const del = (roleID) => {
-  return axios.post(API_URL.adminRole.delete, {
-    single_id: roleID
-  });
+export const del = (id) => {
+  return axios.get(API_URL.adminRole.delete+ "/" + id
+  );
 }
 
 /**

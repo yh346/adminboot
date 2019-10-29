@@ -8,7 +8,7 @@ import {
  * @param {Object} filter
  */
 export const manage = (filter) => {
-  return axios.get(API_URL.banner.manage, filter);
+  return axios.post(API_URL.banner.manage, filter);
 }
 
 /**

@@ -6,7 +6,7 @@ import { API_URL } from './url';
  *  @param {Object} filter 
  */
 export const list = (filter) => {
-    return axios.get(API_URL.loginLog.list, filter);
+    return axios.post(API_URL.loginLog.list, filter);
 }
 
 /**

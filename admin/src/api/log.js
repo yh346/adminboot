@@ -8,7 +8,7 @@ import {
  *  @param {Object} filter 
  */
 export const list = (filter) => {
-  return axios.get(API_URL.log.list, filter);
+  return axios.post(API_URL.log.list, filter);
 }
 
 /**

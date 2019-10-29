@@ -46,14 +46,6 @@
             style="width: 300px"
           ></Input>
         </FormItem>
-        <FormItem label="字典代号" prop="dict_code" label-for="dict_code">
-          <Input
-            element-id="dict_code"
-            v-model="dict.dict_code"
-            placeholder="字典代号"
-            style="width: 300px"
-          ></Input>
-        </FormItem>
         <FormItem label="字典值" prop="dict_value" label-for="dict_value">
           <Input
             element-id="dict_value"
@@ -106,31 +98,11 @@ export default {
               : h("span", params.row.dict_name);
           }
         },
-        {
-          title: "字典代号",
-          key: "dict_code",
-          width: 140,
-          align: "center",
-          render: (h, params) => {
-            return params.row.editting
-              ? h("Input", {
-                  props: {
-                    type: "text",
-                    value: params.row.dict_code
-                  },
-                  on: {
-                    "on-change": event => {
-                      params.row.current.dict_code = event.target.value;
-                    }
-                  }
-                })
-              : h("span", params.row.dict_code);
-          }
-        },
+        
         {
           title: "字典值",
           key: "dict_value",
-          width: 140,
+          width: 300,
           render: (h, params) => {
             return params.row.editting
               ? h("Input", {
@@ -243,7 +215,6 @@ export default {
                           this.$set(params.row, "editting", false);
                           var obj = deepCopy(params.row.current);
                           params.row.dict_name = obj.dict_name;
-                          params.row.dict_code = obj.dict_code;
                           params.row.dict_value = obj.dict_value;
                           params.row.is_disabled = obj.is_disabled;
                           params.row.sort = obj.sort;

@@ -21,14 +21,6 @@
       <FormItem>
         <Input
           type="text"
-          placeholder="关键词"
-          v-model="filter.keyword"
-          @keyup.enter.native="getList(true)"
-        ></Input>
-      </FormItem>
-      <FormItem>
-        <Input
-          type="text"
           placeholder="操作帐号"
           v-model="filter.user_name"
           @keyup.enter.native="getList"

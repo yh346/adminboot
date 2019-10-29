@@ -16,7 +16,7 @@
       </FormItem>
       <FormItem label="部门类型" prop="dept_type">
         <Select v-model="dept.dept_type">
-          <Option v-for="item in type_array" :value="item.code.toString()" :key="item.code">{{ item.name }}</Option>
+          <Option v-for="item in type_array" :value="item.code" :key="item.code">{{ item.name }}</Option>
         </Select>
       </FormItem>
       <FormItem label="排序" label-for="sort">
@@ -68,7 +68,7 @@ export default {
       dept: {
         dept_id: 0,
         dept_name: "",
-        dept_type: "",
+        dept_type: 0,
         sort: 0
       },
       rules: {
@@ -82,8 +82,9 @@ export default {
         dept_type: [
           {
             required: true,
+            type: "integer",
             message: "请选择部门类型",
-            trigger: "change"
+            trigger: "blur"
           }
         ]
       },
@@ -116,7 +117,7 @@ export default {
       this.dept = {
         dept_id: 0,
         dept_name: "",
-        dept_type: "",
+        dept_type: 0,
         sort: 0
       };
       this.$refs[name].resetFields();

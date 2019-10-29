@@ -31,20 +31,16 @@ export const updateGroup = (json) => {
  * 删除权限组数据
  * @param {Number} groupID
  */
-export const deleteGroup = (groupID) => {
-  return axios.post(API_URL.adminRight.deleteGroup, {
-    single_id: groupID
-  });
+export const deleteGroup = (id) => {
+  return axios.get(API_URL.adminRight.deleteGroup+"/"+id);
 }
 
 /**
  * 设置权限组状态
  * @param {Number} groupID
  */
-export const disabledGroup = (groupID) => {
-  return axios.post(API_URL.adminRight.disabledGroup, {
-    single_id: groupID
-  });
+export const disabledGroup = (id) => {
+  return axios.post(API_URL.adminRight.disabledGroup+"/"+id);
 }
 
 /**
@@ -83,10 +79,8 @@ export const _children = (parentID) => {
  * 删除权限
  * @param {Number} rightID
  */
-export const _delete = (rightID) => {
-  return axios.post(API_URL.adminRight.delete, {
-    single_id: rightID
-  });
+export const _delete = (id) => {
+  return axios.post(API_URL.adminRight.delete+"/"+id);
 }
 
 /**

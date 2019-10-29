@@ -23,6 +23,7 @@
           type="text"
           placeholder="登录帐号"
           v-model="filter.user_name"
+          clearable 
           @keyup.enter.native="getList(true)"
         ></Input>
       </FormItem>
